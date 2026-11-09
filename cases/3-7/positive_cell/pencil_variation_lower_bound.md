@@ -4,12 +4,12 @@ Let `M` be a generic real `k`-by-`n` matrix, with positive last maximal
 minor, and let `r(M)` be its future target-sign-change rank under positive
 shears, as in `rank_one_ideal_theorem.md`. For a fixed `(k-1)`-subset `S`,
 list the complement as `i_1<...<i_q`, `q=n-k+1`, and put
-\(I_h=S\cup\{i_h\}\), sorted. Let `var` count sign changes in a list of
+$I_h=S\cup\{i_h\}$, sorted. Let `var` count sign changes in a list of
 nonzero real numbers. Then
-\[
+$$
  \boxed{\displaystyle r(M)\ge
  \operatorname{var}\bigl(p_{[k]},p_{I_1},\ldots,p_{I_q},p_{[n-k+1,n]}\bigr).}\tag{1}
-\]
+$$
 The result holds for every choice of `S`; maximize (1) over them. The final
 minor is the positive invariant last minor. For `k=1`, this recovers the
 usual sign-variation lower bound for a row vector. The proof is source-free
@@ -26,11 +26,11 @@ positive word with the following strict endpoint properties:
 * for every `l>=h`, the sign of `p_{I_l}` is unchanged.
 
 Choose integer weights on the column labels by
-\[
+$$
  w_s=W\quad(s\in S),\qquad
  w_{i_l}=\begin{cases}0,&l<h,\\q-l+1,&l\ge h,\end{cases}
  \qquad W>q(q+1)/2.\tag{2}
-\]
+$$
 Set `d_i=t^{w_i}`, `D_t=diag(d_i)`, and conjugate the word to
 `D_t^{-1}L_0D_t`. It is again a positive word. In Cauchy–Binet, the
 relative size of the term indexed by `K` is controlled by
@@ -61,15 +61,15 @@ the lower bound.
 ## An exact integer example
 
 For the matrix with columns
-\[
+$$
  (0,0,1),(5,25,1),(-3,-7,1),(-2,-5,1),(-7,0,1),(5,-24,1),(4,-10,1),
-\]
+$$
 all maximal minors are nonzero, the target is `40`, and the last minor is
 `144`. For `S={2,6}` in one-based indexing, the five pencil minors in
 increasing omitted index are
-\[
+$$
  -245,\quad392,\quad343,\quad588,\quad-49.
-\]
+$$
 Thus the displayed seven-sign list is `+ − + + + − +`, with four changes,
 so (1) proves at least four future target changes. The independent formal
 52-sign graph gives upper bound `H=4`; therefore its true rank is exactly 4.

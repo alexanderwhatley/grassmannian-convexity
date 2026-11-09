@@ -4,7 +4,7 @@
 reviewed. `verify_upper_bound.cpp` reconstructs its entire finite sign graph
 and its candidate rank from scratch. It reads no certificate, event table,
 or other input data file. It directly checks every rank inequality and
-the sharper bound \(r(M)\le8+m(M)\), where \(m\) is the minimum sign
+the sharper bound $r(M)\le8+m(M)$, where $m$ is the minimum sign
 variation of a nonzero-evaluation row-space vector.
 
 Run:
@@ -32,7 +32,7 @@ The checker derives all 114 nonzero move derivatives with exact symbolic
 polynomials, verifies generic event separation, constructs 23,246,848
 states and 144,788,896 distinct directed sign-flip edges, and checks
 230,629,888 move-labeled transitions. It computes a nonnegative integer
-rank bounded by \(8+m\), dropping at each target sign change. The theorem
+rank bounded by $8+m$, dropping at each target sign change. The theorem
 still relies on the mathematical coverage and perturbation arguments in
 the accompanying proof report, as well as the correctness of the program.
 
@@ -40,9 +40,9 @@ the accompanying proof report, as well as the correctness of the program.
 exact rational/integer arithmetic. The trajectory has 207 positive moves,
 12 target changes, and all 52 tracked features nonzero at every vertex.
 The suffixes beginning after moves 0, 15, 36, 57, and 89 start with
-\(m=4,3,2,1,0\) and respectively have 12, 11, 10, 9, and 8 target changes.
+$m=4,3,2,1,0$ and respectively have 12, 11, 10, 9, and 8 target changes.
 Thus, subject to independent review of the upper certificate, the bound is
-sharp in each class and gives \(r(3,7)=12\).
+sharp in each class and gives $r(3,7)=12$.
 
 `compact_witness.json` is a shorter 105-move rational witness. It has 12
 target changes, all 52 tracked features strict at each vertex, and its
@@ -52,16 +52,16 @@ determinants. The still shorter `short_witness.json` has an integer starting
 matrix, 29 integer move sizes, and 12
 changes. The optimal `optimal_witness.json` has 28 positive rational moves,
 and `optimal_witness_integer.json` is an all-integer version. These and the
-12-move preparation give a 40-move path from every generic start with \(m=4\).
+12-move preparation give a 40-move path from every generic start with $m=4$.
 
 `simple_moment_12.json` gives a second exact 12-crossing sequence, starting
-from the particularly simple columns \((-1)^i(1,i,i^2)\), for
-\(i=1,\ldots,7\). `verify_moment.py` independently replays its 219 positive
+from the particularly simple columns $(-1)^i(1,i,i^2)$, for
+$i=1,\ldots,7$. `verify_moment.py` independently replays its 219 positive
 rational moves and checks all maximal minors at every sampled vertex.
 `simple_moment_28.json` is an optimal 28-move continuation from the same columns;
 `simple_moment_40.json` is an example produced by the general constructor.
 
-The proof report also shows that every generic start with \(m=4\) has a
+The proof report also shows that every generic start with $m=4$ has a
 12-crossing continuation, by a separate positive-cell transfer argument.
 The `positive_cell/` directory contains two independent symbolic checks of
 the 12-parameter chart and a Jacobian check. These optional checks require
