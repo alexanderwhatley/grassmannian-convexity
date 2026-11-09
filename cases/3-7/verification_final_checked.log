@@ -1,0 +1,63 @@
+PASS 207 positive rational moves; all 52 features strict at all 208 vertices
+PASS 12 target crossings; one trajectory is sharp in every m=0,1,2,3,4 class
+steps 50 flips 1
+steps 100 flips 4
+steps 150 flips 7
+steps 200 flips 9
+PASS Fword 18204 G56<0<G57, r5>r6>r7>0; exact 219 positive moves from moment-curve nodes [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1)]
+PASS all 35 minors strict at all vertices; exactly 12 target changes at [35, 55, 75, 95, 109, 127, 147, 167, 187, 207, 216, 219]
+PASS 105 positive rational moves; 52 strict features at every vertex
+PASS exactly 12 target changes at [10, 15, 25, 29, 37, 48, 63, 67, 78, 95, 102, 105]
+PASS minimum-variation drops: [(10, 4, 3, 1), (15, 3, 2, 2), (25, 2, 1, 3), (29, 1, 0, 4)]
+PASS generic alternating input; 117 positive rational moves; 35 minors strict at every vertex
+PASS exactly 12 target changes at [22, 27, 37, 41, 49, 60, 75, 79, 90, 107, 114, 117] with no change in the first 12 moves
+PASS 29 positive rational moves; 52 strict features at every vertex
+PASS exactly 12 target changes at [1, 3, 5, 8, 11, 13, 17, 19, 22, 25, 27, 29]
+PASS minimum-variation drops: [(1, 4, 3, 1), (3, 3, 2, 2), (8, 2, 1, 4), (22, 1, 0, 9)]
+PASS 35 positive rational moves; 52 strict features at every vertex
+PASS exactly 12 target changes at [7, 9, 11, 14, 17, 19, 23, 25, 28, 31, 33, 35]
+PASS minimum-variation drops: [(7, 4, 3, 1), (9, 3, 2, 2), (14, 2, 1, 4), (28, 1, 0, 9)]
+PASS 29 positive rational moves; 52 strict features at every vertex
+PASS exactly 12 target changes at [1, 4, 6, 8, 11, 13, 17, 19, 22, 25, 27, 29]
+PASS minimum-variation drops: [(1, 4, 3, 1), (4, 3, 2, 2), (8, 2, 1, 4), (22, 1, 0, 9)]
+PASS generic alternating input; 55 positive rational moves; 35 minors strict at every vertex
+PASS exactly 12 target changes at [14, 17, 19, 24, 26, 35, 37, 39, 43, 45, 52, 55] with no change in the first 12 moves
+PASS generic alternating input; 41 positive rational moves; 35 minors strict at every vertex
+PASS exactly 12 target changes at [13, 15, 17, 20, 23, 25, 29, 31, 34, 37, 39, 41] with no change in the first 12 moves
+PASS 192 necessary sign states; 576 edges; max rank by m {0: 4, 1: 5, 2: 6}
+PASS exact generic event separation witness [[19, 16, 2], [0, -3, 0], [-2, 19, 9], [4, -6, 5], [9, -6, -3]]
+PASS independent 384-state, 1152 labeled edges; <=2 U5 and one U1 run maxima [6, 8, 10] reached 2496 automaton states
+PASS exact witness separates all 12 same-generator minor-root pairs
+PASS exact Taylor coefficient 1 elapsed 0.001
+PASS exact Taylor coefficient 2 elapsed 0.003
+PASS exact Taylor coefficient 3 elapsed 0.005
+max Taylor coefficient bits 84
+epsilon exponent 1 nonpositive parameter
+epsilon exponent 2 nonpositive parameter
+epsilon exponent 4 nonpositive parameter
+epsilon exponent 8 nonpositive parameter
+epsilon exponent 16 nonpositive parameter
+epsilon exponent 32 prefix sign mismatch
+PASS exact rational construction epsilon exponent 64 moves 41 flips [13, 15, 17, 20, 23, 25, 29, 31, 34, 37, 39, 41] max parameter bits 209 elapsed 0.014
+PASS generic alternating input; 41 positive rational moves; 35 minors strict at every vertex
+PASS exactly 12 target changes at [13, 15, 17, 20, 23, 25, 29, 31, 34, 37, 39, 41] with no change in the first 12 moves
+PASS all 35 minor and 15 feature exact affine-normalization identities
+PASS exact symbolic reconstruction of all 114 nonzero derivatives and 198 zero derivatives; G identities verified
+PASS exact nonzero root-separation witnesses for all 1070 same-generator feature pairs
+PASS 16 exterior identities; 1920 admissible F patterns; 4560 angular types; 16051200 reconstructed base states
+PASS four-circuit and Karp m agree on 16051200 bases; counts 0:5517600 1:8605068 2:1889334 3:39186 4:12
+graph workers finished 1/8
+graph workers finished 2/8
+graph workers finished 3/8
+graph workers finished 4/8
+graph workers finished 5/8
+graph workers finished 6/8
+graph workers finished 7/8
+graph workers finished 8/8
+PASS constructed 23246848 augmented states and 144788896 distinct directed feature-flip edges
+reverse graph constructed
+forward SCC traversal complete
+SCC components=783708 largest=10657
+PASS computed target rank H from graph: 783708 SCCs; largest=10657; maximum H=12
+PASS H in [0,8+m] on all 23246848 admissible states; maxima by m 0:8 1:9 2:10 3:11 4:12
+PASS direct H rank inequalities on 209042944 base and 21586944 G move-labeled edges

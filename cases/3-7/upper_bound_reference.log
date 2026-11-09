@@ -1,0 +1,20 @@
+PASS all 35 minor and 15 feature exact affine-normalization identities
+PASS exact symbolic reconstruction of all 114 nonzero derivatives and 198 zero derivatives; G identities verified
+PASS exact nonzero root-separation witnesses for all 1070 same-generator feature pairs
+PASS 16 exterior identities; 1920 admissible F patterns; 4560 angular types; 16051200 reconstructed base states
+PASS four-circuit and Karp m agree on 16051200 bases; counts 0:5517600 1:8605068 2:1889334 3:39186 4:12
+graph workers finished 1/8
+graph workers finished 2/8
+graph workers finished 3/8
+graph workers finished 4/8
+graph workers finished 5/8
+graph workers finished 6/8
+graph workers finished 7/8
+graph workers finished 8/8
+PASS constructed 23246848 augmented states and 144788896 distinct directed feature-flip edges
+reverse graph constructed
+forward SCC traversal complete
+SCC components=783708 largest=10657
+PASS computed target rank H from graph: 783708 SCCs; largest=10657; maximum H=12
+PASS H in [0,8+m] on all 23246848 admissible states; maxima by m 0:8 1:9 2:10 3:11 4:12
+PASS direct H rank inequalities on 209042944 base and 21586944 G move-labeled edges

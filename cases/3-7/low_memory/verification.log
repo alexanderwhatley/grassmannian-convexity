@@ -1,0 +1,7 @@
+PASS all 35 minor and 15 feature exact affine-normalization identities
+PASS exact symbolic reconstruction of all 114 nonzero derivatives and 198 zero derivatives; G identities verified
+PASS exact nonzero root-separation witnesses for all 1070 same-generator feature pairs
+PASS 16 exterior identities; 1920 admissible F patterns; 4560 independent angular types; 16051200 reconstructed sorted keys (optional reference not supplied)
+PASS four-circuit and Karp m agree on 16051200 bases; counts 0:5517600 1:8605068 2:1889334 3:39186 4:12
+PASS Q in [0,8+m] on 23246848 admissible augmented states; D=3641 counts 0:971(maxQ=8) 1:1787(maxQ=9) 2:883(maxQ=10) 3:0(maxQ=11) 4:0(maxQ=12)
+PASS Q rank inequalities on 209042944 base and 21586944 G move-labeled edges
