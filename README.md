@@ -1,6 +1,8 @@
 # Grassmann convexity conjecture
 
-This repository collects research on the Grassmann convexity conjecture. Its first case study is a **candidate computer-assisted proof for (k,n) = (3,7)**. The argument and code have not been independently peer reviewed or formally verified. In particular, the mathematical coverage of the finite graph, the perturbation argument, and the checker itself need external scrutiny.
+**Candidate result: the Grassmann convexity conjecture for all cases with n ≤ 7.** The computer-assisted argument in this repository proposes a proof of (k,n) = (3,7); signed-reversed Gale duality then gives (4,7). Combined with previously established cases, this would cover every 0 < k < n ≤ 7.
+
+The coverage uses the elementary k = 1 and k = n−1 cases, the published k = 2 and k = n−2 theorem, the published paper’s reported computer-assisted verification of (3,6), and the candidate (3,7) result and its (4,7) dual. The (3,7) argument and code have not been independently peer reviewed or formally verified. Its finite-state coverage, treatment of degeneracies, and software require external scrutiny, so the all-n ≤ 7 conclusion is conditional on that review.
 
 ## The problem
 
