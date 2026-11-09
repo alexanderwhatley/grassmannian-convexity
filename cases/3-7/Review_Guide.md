@@ -6,6 +6,12 @@ certificate, but the mathematical state-coverage and perturbation arguments,
 and the checker itself, require external review. The mathematical statement,
 sharp examples, and general theorems are in `Proof_and_Sharp_Bounds.md`.
 
+The word “independent” below describes distinct checks or implementations of
+particular components. It does not certify independent authorship or a full
+third-party reimplementation; shared constructions and assumptions remain
+possible. The separate dual-table verifier explicitly reuses the main graph
+construction.
+
 ## What needs to be established
 
 For a generic real `3 x 7` matrix, normalize `p567>0` and let `m` be the
@@ -104,3 +110,15 @@ established `8+m` certificate, the published rank-two theorem, and an
 independently checked 384-state five-column sign automaton. The 28-move
 witness attains that bound. The all-dimensional positive-cell transfer and rank-one criterion do not imply
 the conjectured upper bound for other `(k,n)`.
+
+## Historical logs
+
+The four files `sanitizer_reference.log`, `standalone_data_free_checked.log`,
+`standalone_data_free_checked_asan_noleak.log`, and `upper_bound_reference.log`
+have identical bytes; the three low-memory logs with the same output are also
+byte-identical. Identical output alone establishes neither shared nor separate
+runs. The logs do not by themselves establish who ran a check or the compiler
+options used. They are retained as historical artifacts, not as four or three
+independent pieces of evidence. The complete audit archive is approximately
+17.5 MB compressed and remains in Git history. It is a historical snapshot;
+consult the current files for the corrected formatting and witness note.

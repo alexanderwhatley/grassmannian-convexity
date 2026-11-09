@@ -7,6 +7,10 @@ the stated finite-state coverage and generic-perturbation arguments and the
 verification programs are correct. It is not an elementary proof or a
 formally verified proof-assistant development.
 
+Here, “independent” refers to separate checks of specified components, not
+a complete third-party reimplementation or peer review. Some checks share
+state-construction ideas. See `Review_Guide.md` for the remaining audit.
+
 Let $M=(v_1,\ldots,v_7)$ be a real $3\times7$ matrix whose maximal
 minors are nonzero, and write
 $$
@@ -168,10 +172,22 @@ generic condition: for each of the 1,070 pairs of active features the
 affine-root resultant is a nonzero polynomial. The package verifies all
 1,070 at the single integer witness with columns
 $$
-(12,-5,1),\ (-7,4,-12),\ (6,9,7),\ (2,-11,-5),\
+\begin{gathered}
+(12,-5,1),\ (-7,4,-12),\ (6,9,7),\ (2,-11,-5),\\
 (6,-11,-11),\ (-3,6,9),\ (-6,12,-4).
+\end{gathered}
 $$
-It also checks that all 52 feature values at that witness are nonzero.
+All 52 feature values at that witness are also nonzero. The current
+`verify_upper_bound.cpp` uses a different witness, with columns
+$$
+\begin{gathered}
+(28,9,21),\ (6,17,26),\ (17,17,-29),\ (29,4,-4),\\
+(-26,-27,1),\ (17,-29,-12),\ (21,13,-29).
+\end{gathered}
+$$
+Both matrices pass the same exact separation and nonvanishing checks;
+`verify_separation_witnesses.cpp` reruns both using the main checker’s
+polynomial and derivative routines.
 For a fixed prefix of positive moves, the map from the initial matrix to
 the prefix matrix is invertible, so avoiding these finitely many proper
 algebraic sets is possible simultaneously. Perturbation preserves all
@@ -567,15 +583,15 @@ denoted by $\Delta$, they are
 $$
 \begin{array}{ll}
 t_1=\dfrac{\Delta_{167}\Delta_{456}}{\Delta_{156}},&
-t_2=\dfrac{\Delta_{156}\Delta_{345}}{\Delta_{145}\Delta_{456}},\$$2mm]
+t_2=\dfrac{\Delta_{156}\Delta_{345}}{\Delta_{145}\Delta_{456}},\\[2mm]
 t_3=\dfrac{\Delta_{145}\Delta_{234}}{\Delta_{134}\Delta_{345}},&
-t_4=\dfrac{\Delta_{134}}{\Delta_{234}},\$$2mm]
+t_4=\dfrac{\Delta_{134}}{\Delta_{234}},\\[2mm]
 t_5=\dfrac{\Delta_{127}\Delta_{156}}{\Delta_{126}\Delta_{167}},&
-t_6=\dfrac{\Delta_{126}\Delta_{145}}{\Delta_{125}\Delta_{156}},\$$2mm]
+t_6=\dfrac{\Delta_{126}\Delta_{145}}{\Delta_{125}\Delta_{156}},\\[2mm]
 t_7=\dfrac{\Delta_{125}\Delta_{134}}{\Delta_{124}\Delta_{145}},&
-t_8=\dfrac{\Delta_{124}}{\Delta_{134}},\$$2mm]
+t_8=\dfrac{\Delta_{124}}{\Delta_{134}},\\[2mm]
 t_9=\dfrac{\Delta_{126}}{\Delta_{127}},&
-t_{10}=\dfrac{\Delta_{125}}{\Delta_{126}},\$$2mm]
+t_{10}=\dfrac{\Delta_{125}}{\Delta_{126}},\\[2mm]
 t_{11}=\dfrac{\Delta_{124}}{\Delta_{125}},&
 t_{12}=\dfrac{\Delta_{123}}{\Delta_{124}}.
 \end{array}\tag{9}

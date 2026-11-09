@@ -18,7 +18,8 @@ Python 3.10 or newer, and sufficient RAM.
 On the reference machine, the graph check took about 35 seconds and peaked
 at approximately 2.4 GiB; other machines may take longer. Compile without
 `-DNDEBUG`: the source deliberately requires assertions. The included
-sanitizer log records an independent address/undefined-behavior run.
+historical sanitizer log records output attributed to an address/undefined-
+behavior run; the log alone does not establish its provenance or flags.
 
 For a machine with less memory, `./run_low_memory.sh` checks the same upper
 bound using two bundled compressed rank arrays. This version reconstructs
@@ -88,3 +89,8 @@ python3 positive_cell/verify_constructed_12.py result.json
 The script checks every output sign exactly. Its termination argument and
 input format are described in `positive_cell/exact_rational_constructor.md`.
 The constructor and its verifier use Python's standard library only.
+
+The [dual-bound note](Dual_Bound_and_Conjecture.md) describes an additional
+exhaustive table, its positive-move dual convention, and how to reproduce it.
+The dual checker adapts this package’s graph construction; it is not a
+third-party reimplementation.

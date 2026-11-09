@@ -36,13 +36,23 @@ source code remain review obligations.
 
 ## Outstanding mathematical directions
 
+A signed-reversed Gale-dual check and a proposed general pointwise bound are
+described in `Dual_Bound_and_Conjecture.md`. The new checker shares the main
+state construction and does not replace an outside reimplementation.
+
 1. **Independent proof audit.** Reimplement the 50-sign coverage and the two
    G filters from the mathematical definitions, review generic-event
    separation, and independently verify the rank inequalities. The source-only
    and lower-memory checkers both avoid trusting precomputed graph paths, but
    their coverage argument is still a mathematical dependency. See
    `Review_Guide.md` and the independent audits in the full archive.
-2. **Understand optimal 28-move paths.** Every such path needs exactly twelve
+2. **Reproduce (3,6) with a separately built pipeline** and check its
+   predicted dual pointwise bounds. Compare with the reported published
+   computation where details can be obtained.
+3. **Seek a human-scale $k=3$ pointwise proof.** The conjecture in the dual
+   note would imply the global bound for every $n$. The available finite
+   data does not establish that conjecture.
+4. **Understand optimal 28-move paths.** Every such path needs exactly twelve
    U3 target flips, eleven U2/U4 separators, two U1 moves, two U5 moves and
    one U6 move; each of U2 and U4 appears 4 to 7 times. Both U5 moves must
    flip p345, and the unique U6 flips p456. Their order is U5, U6, U5.
@@ -50,13 +60,13 @@ source code remain review obligations.
    one-U1/three-U5 allocation. Characterize the realizable words and
    investigate whether the 12-move preparation can be shortened uniformly. The lower-bound checker is
    `verify_minimum_28_independent.py`.
-3. **Is the graph rank actual?** For realizable strict states with `H<=3`,
+5. **Is the graph rank actual?** For realizable strict states with `H<=3`,
    the rank-one/terminal theorems and an exhaustive tally imply `r=H`.
    No general equality is asserted for `H>=4`. A concrete unresolved `H=4`
    matrix, its exact two-flip path, rank-two upper bound 4, and carefully
    limited failed searches are in `sample289_open_rank_case.md`: its true
    rank is presently only known to be 2 or 4.
-4. **Human-scale upper bound.** The `m=0` case follows from the published
+6. **Human-scale upper bound.** The `m=0` case follows from the published
    rank-two theorem; a suffix-halfspace potential handles another class.
    Coarse projected graphs that retain only 35 Plücker signs admit abstract
    rank 24, while some tested 38–41-sign models still admit rank 16. The

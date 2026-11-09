@@ -22,9 +22,14 @@ For a generic 3 × 7 matrix M, let m(M) be the minimum number of sign changes in
 
 The proof uses a finite over-approximation of real trajectories. A state records 35 maximal-minor signs and 17 auxiliary signs. The checker reconstructs 23,246,848 states and directly checks 230,629,888 move-labeled transition inequalities using exact arithmetic. The reduction from real trajectories to this graph is a mathematical part of the argument, not a consequence of the computation alone. The detailed report explains the assumptions, checks, witnesses, and remaining review obligations.
 
+The same certificate, combined with signed-reversed Gale duality, would also give the (4,7) case. A [dual-bound note](cases/3-7/Dual_Bound_and_Conjecture.md) gives the precise convention, a new exhaustive rank-table check, and a proposed general pointwise bound. All consequences remain subject to review of the original certificate.
+
+When this repository describes checks as independent, it means separately implemented or distinct checks of particular components, not independent third-party verification of the complete proof. Some implementations share constructions, and the dual-table checker adapts the original graph verifier.
+
 ## Files and reproduction
 
 - [Proof and sharp bounds](cases/3-7/Proof_and_Sharp_Bounds.md): the candidate argument, definitions, witnesses, and further claims.
+- [Dual bound and conjecture](cases/3-7/Dual_Bound_and_Conjecture.md): the dual convention, exhaustive graph table, and limitations.
 - [Review guide](cases/3-7/Review_Guide.md): a map of the mathematical and computational obligations.
 - [Certificate instructions](cases/3-7/README.md): requirements, detailed checks, and lower-memory alternative.
 - [Source-only upper-bound checker](cases/3-7/verify_upper_bound.cpp), [witnesses](cases/3-7/optimal_witness_integer.json), and supporting scripts are included in `cases/3-7/`.
