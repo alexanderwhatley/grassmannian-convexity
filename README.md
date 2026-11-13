@@ -28,6 +28,15 @@ The same certificate, combined with signed-reversed Gale duality, would also giv
 
 When this repository describes checks as independent, it means separately implemented or distinct checks of particular components, not independent third-party verification of the complete proof. Some implementations share constructions, and the dual-table checker adapts the original graph verifier.
 
+## Broader rank-three candidates
+
+Two newer unrefereed arguments extend the investigation beyond `(3,7)`:
+
+- **Quadratic bound for arbitrary finite words.** For `q=n-3>=2`, a proof candidate gives `r(3,n) <= 2q^2-3q+4` for strictly witnessed sign changes; for `q=1` it gives 3. This is a proposed quadratic improvement on the published cubic bound, not the conjectured linear bound. Its planar-rank, chart, pole and genericity arguments require independent review.
+- **Reduced words.** A separate proof candidate gives the sharp maximum `ceil(11n/6)-5` over positive shear words whose index sequence is Coxeter-reduced. The sorting-network upper bound is published; the proposed contribution is the construction attaining it with actual matrix moves. Arbitrary words can backtrack and are not covered.
+
+The [rank-three research notes](research/rank-three/README.md) contain both arguments, their assumptions, companion lemmas and finite exact checks. The discrete sign-change statements do not by themselves establish all continuous or multiplicity variants.
+
 ## Files and reproduction
 
 - [Proof and sharp bounds](cases/3-7/Proof_and_Sharp_Bounds.md): the candidate argument, definitions, witnesses, and further claims.
