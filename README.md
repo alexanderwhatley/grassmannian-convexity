@@ -1,6 +1,8 @@
 # Grassmann convexity conjecture
 
-**Candidate result: the Grassmann convexity conjecture for all cases with n ≤ 7.** The computer-assisted argument in this repository proposes a proof of (k,n) = (3,7); signed-reversed Gale duality then gives (4,7). Combined with previously established cases, this would cover every 0 < k < n ≤ 7.
+**Conditional all-ranks result.** Assuming the ordered-positive-flag transversality proposition in Qiyue Tang's 2026 preprint, the sharp Grassmann convexity bound follows for every `0 < k < n`. The [standalone proof](research/all-ranks/Proof_via_ordered_positive_flags.md) gives the continuous bound with multiplicities, the discrete bound for arbitrary starting matrices, and the corollary for disconjugate differential equations. The deduction uses the stated preprint result and the published equivalence; it does not claim an independent proof of those inputs.
+
+**Earlier candidate result: the Grassmann convexity conjecture for all cases with n ≤ 7.** The computer-assisted argument in this repository proposes a proof of (k,n) = (3,7); signed-reversed Gale duality then gives (4,7). Combined with previously established cases, this would cover every 0 < k < n ≤ 7.
 
 The coverage uses the elementary k = 1 and k = n−1 cases, the published k = 2 and k = n−2 theorem, the published paper’s reported computer-assisted verification of (3,6), and the candidate (3,7) result and its (4,7) dual. The (3,7) argument and code have not been independently peer reviewed or formally verified. Its finite-state coverage, treatment of degeneracies, and software require external scrutiny, so the all-n ≤ 7 conclusion is conditional on that review.
 
@@ -12,8 +14,9 @@ An equivalent discrete formulation tracks the signs of maximal minors of a real 
 
 ## Prior work
 
+- Qiyue Tang's [*The Shapiro–Shapiro conjecture for ordered positive flags*](https://hexagonmath.org/pdf/2611.00409v1), Proposition 4.1, supplies the transversality input for the conditional all-ranks proof.
 - Saldanha, Boris Shapiro, and Michael Shapiro proved the conjecture for k = 2 and, by duality, k = n−2. See [*Grassmann convexity and multiplicative Sturm theory, revisited*](https://arxiv.org/abs/1902.09741).
-- Their [*Finiteness of rank for Grassmann convexity*](https://arxiv.org/abs/2110.07389) gives an equivalent discrete formulation, the general lower bound k(n−k), and a general explicit upper bound. It also reports a computer-assisted verification of (3,6). The general conjecture remains the broader problem addressed by this repository.
+- Their [*Finiteness of rank for Grassmann convexity*](https://arxiv.org/abs/2110.07389) gives an equivalent discrete formulation, the general lower bound k(n−k), and a general explicit upper bound. It also reports a computer-assisted verification of (3,6). This paper predates the conditional all-ranks deduction described above.
 - Steven Karp's [*Sign variation, the Grassmannian, and total positivity*](https://arxiv.org/abs/1503.05622) supplies sign-variation results used in the (3,7) analysis.
 
 These references establish context; they should not be read as independent verification of the new certificate in this repository. No claim of priority or exhaustive literature review is made here.
@@ -39,6 +42,7 @@ The [rank-three research notes](research/rank-three/README.md) contain both argu
 
 ## Files and reproduction
 
+- [All-ranks proof via ordered positive flags](research/all-ranks/Proof_via_ordered_positive_flags.md): a standalone proof conditional on Tang's transversality proposition, including multiple zeros and arbitrary finite words.
 - [Proof and sharp bounds](cases/3-7/Proof_and_Sharp_Bounds.md): the candidate argument, definitions, witnesses, and further claims.
 - [Dual bound and conjecture](cases/3-7/Dual_Bound_and_Conjecture.md): the dual convention, exhaustive graph table, and limitations.
 - [Review guide](cases/3-7/Review_Guide.md): a map of the mathematical and computational obligations.
@@ -54,3 +58,4 @@ cd cases/3-7
 ```
 
 The script needs Python 3.10+, a GCC/Clang-compatible C++17 compiler with pthreads, and substantial memory (about 2.4 GiB on the reference run). It compiles with assertions enabled. `./run_low_memory.sh` checks the upper bound with bundled rank data; see the certificate instructions for details. The archived logs describe earlier runs and are not a substitute for independent review.
+
