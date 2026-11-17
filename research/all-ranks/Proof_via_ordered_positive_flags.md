@@ -16,7 +16,7 @@ Fix integers $`n\ge2`$ and $`1\le k<n`$, and write $`[k]=\{1,\ldots,k\}`$. Let $
 A'(t)=A(t)B(t),\qquad
 B(t)=\sum_{j=1}^{n-1}\beta_j(t)E_{j+1,j},\qquad
 \beta_j(t)>0.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Set
@@ -24,7 +24,7 @@ Set
 ```math
 f(t)=\det\bigl((VA(t))_{[k],[k]}\bigr)
     =\det\bigl((VA(t))_{[:,\,1:k]}\bigr).
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Then every zero of $`f`$ has finite order and the sum of the orders of all zeros on $`J`$ is at most $`k(n-k)`$. At a finite endpoint, the order is understood one-sided; smooth positive coefficients and the flow can be extended slightly beyond that endpoint.
@@ -33,7 +33,7 @@ Then every zero of $`f`$ has finite order and the sum of the orders of all zeros
 
 ```math
 v_j\longmapsto v_j+u v_{j+1},\qquad 1\le j\lt n,\quad u>0,
-\tag{3}
+\qquad\text{(3)}
 ```
 
 with the other columns fixed. At each sampled matrix record the sign of its first $`k`$-column determinant, delete all zero entries, and count sign changes in the remaining sequence. The number of changes is at most $`k(n-k)`$. In particular, the $`3\times n`$ bound is $`3(n-3)`$.
@@ -52,7 +52,7 @@ We use the following consequence of [T, Proposition 4.1 and Corollary 4.2]:
 >
 > ```math
 > \sum_{i=1}^m c_i\le p(n-p).
-> \tag{4}
+> \qquad\text{(4)}
 > ```
 
 Indeed, [T, Proposition 4.1] asserts simultaneous transversality of those actual cells at their common point $`W`$, for arbitrary codimension sums. The independent conormal spaces embed in the cotangent space to $`\mathrm{Gr}(p,n)`$, which has dimension $`p(n-p)`$.
@@ -69,7 +69,7 @@ Its lower unitriangularity follows from the equation. More precisely, for every 
 
 ```math
 \det T(s,t)_{I,J}>0\quad\text{if }i_a\ge j_a\text{ for all }a;
-\tag{5}
+\qquad\text{(5)}
 ```
 
 the other minors are forced to be zero by triangularity.
@@ -94,7 +94,7 @@ Furthermore,
 
 ```math
 G(t)G(s)^{-1}=\bigl(A(s)^{-1}A(t)\bigr)^T=T(s,t)^T.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 By (5), this quotient is strictly totally positive upper unitriangular in the convention of [T]. Thus every finite increasing tuple of flags $`F_\bullet(t)`$ is ordered positive.
@@ -105,7 +105,7 @@ Fix $`t_0\in J`$ and set $`M=VA(t_0)`$. Since $`V`$ has rank $`k`$ and $`A(t_0)`
 
 ```math
 d(I)=\sum_{a=1}^k(i_a-a).
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Let $`\Delta_I(M)`$ be the determinant of the columns indexed by $`I`$.
@@ -115,7 +115,7 @@ Let $`\Delta_I(M)`$ be the determinant of the columns indexed by $`I`$.
 ```math
 f(t_0+h)=c_I\,\Delta_I(M)h^{d(I)}+O(h^{d(I)+1}),
 \qquad c_I>0.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Consequently $`f`$ has order $`d(I)`$ at $`t_0`$ if $`d(I)>0`$, and is nonzero there if $`d(I)=0`$.
@@ -126,7 +126,7 @@ Consequently $`f`$ has order $`d(I)`$ at $`t_0`$ if $`d(I)>0`$, and is nonzero t
 T(h)_{ij}
  =\frac{g_i}{g_j}\frac{h^{i-j}}{(i-j)!}
    +O(h^{i-j+1}),
-\tag{9}
+\qquad\text{(9)}
 ```
 
 while $`T(h)_{ij}=0`$ for $`i<j`$. The formula also holds one-sided at an endpoint after positive extension of the controls.
@@ -136,7 +136,7 @@ For an increasing $`k`$-tuple $`J=(j_1<\cdots<j_k)`$, (9) and the determinant ex
 ```math
 \det T(h)_{J,[k]}
  =c_J h^{d(J)}+O(h^{d(J)+1}),
-\tag{10}
+\qquad\text{(10)}
 ```
 
 where
@@ -146,7 +146,7 @@ c_J=
 \frac{\prod_{a=1}^k g_{j_a}}{\prod_{b=1}^k g_b}
 \frac{\prod_{a\lt b}(j_b-j_a)}
      {\prod_{a=1}^k(j_a-1)!}>0.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 For the last identity, interpret $`1/m!=0`$ for negative integers $`m`$ and observe that
@@ -156,7 +156,7 @@ For the last identity, interpret $`1/m!=0`$ for negative integers $`m`$ and obse
 =\frac{\det_{a,b}\bigl((j_a-1)_{b-1}\bigr)}
        {\prod_a(j_a-1)!}
 =\frac{\prod_{a\lt b}(j_b-j_a)}{\prod_a(j_a-1)!}.
-\tag{12}
+\qquad\text{(12)}
 ```
 
 Here $`(x)_r=x(x-1)\cdots(x-r+1)`$ is a monic polynomial of degree $`r`$.
@@ -165,7 +165,7 @@ Cauchy–Binet gives
 
 ```math
 f(t_0+h)=\sum_{|J|=k}\Delta_J(M)\det T(h)_{J,[k]}.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 By construction $`\Delta_I(M)\ne0`$. If $`\Delta_J(M)\ne0`$, then the first $`j_a`$ columns of $`M`$ have rank at least $`a`$; hence $`j_a\ge i_a`$ for every $`a`$. Therefore $`d(J)\ge d(I)`$, with equality only for $`J=I`$. In (13), the unique lowest-order nonzero term is the one indexed by $`I`$. Equations (10)–(11) prove (8). $`\square`$
@@ -178,7 +178,7 @@ By construction $`\Delta_I(M)\ne0`$. If $`\Delta_J(M)\ne0`$, then the first $`j_
 \dim(W\cap F_j(t_0))
  =j-\mathrm{rank}M_{[:,\,1:j]}
  =\#\{b:h_b\le j\}.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 Thus $`H`$ is the pivot set of the actual Schubert cell. In a basis adapted to the flag, rightmost-pivot echelon coordinates for that cell have $`\sum_{b=1}^p(h_b-b)`$ free entries. Its codimension in $`\mathrm{Gr}(p,n)`$ is therefore
@@ -186,7 +186,7 @@ Thus $`H`$ is the pivot set of the actual Schubert cell. In a basis adapted to t
 ```math
 kp-\sum_{b=1}^p(h_b-b)
  =\sum_{a=1}^k(i_a-a)=d(I).
-\tag{15}
+\qquad\text{(15)}
 ```
 
 The equality follows because $`I`$ and $`H`$ partition $`[n]`$. $`\square`$
@@ -205,7 +205,7 @@ The input (4), with $`p=n-k`$, consequently gives
 \sum_{i=1}^{m}\mathrm{ord}_{t_i}f
  =\sum_{i=1}^{m}c_i
  \le k(n-k).
-\tag{16}
+\qquad\text{(16)}
 ```
 
 In particular, there cannot be more than $`k(n-k)`$ distinct zeros, since any larger finite set would violate (16). All zeros have finite order by Lemma 3, so applying (16) to the finite set of all zeros proves Theorem 1. $`\square`$
@@ -223,7 +223,7 @@ Their supports ensure that, starting from $`A_0(0)=I`$, the solution of (1) sati
 ```math
 A_0(s)=\prod_{r=1}^{s}(I+u_rE_{j_r+1,j_r}),
 \qquad s=0,\ldots,m.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 Consequently $`VA_0(s)`$ is exactly the matrix after $`s`$ moves.
@@ -234,7 +234,7 @@ For $`\varepsilon>0`$ put $`\beta_j^\varepsilon=\beta_j^0+\varepsilon`$ for ever
 A_\varepsilon(s)\longrightarrow A_0(s)
 \quad\text{for all }s=0,\ldots,m
 \quad\text{as }\varepsilon\downarrow0.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 The sample sequence is finite, so for all sufficiently small $`\varepsilon`$, every originally nonzero sampled leading minor retains its sign. Each sign change between consecutive nonzero samples forces, by the intermediate value theorem, at least one zero of $`t\mapsto\det((VA_\varepsilon(t))_{[:,1:k]})`$ in the corresponding interval. These intervals have disjoint interiors. If $`\mathrm{rank}V=k`$, Theorem 1 bounds their number by $`k(n-k)`$. If $`\mathrm{rank}V<k`$, every sampled leading minor is zero, and there are no sign changes. This proves Theorem 2, including the deletion-of-zeros convention. $`\square`$
