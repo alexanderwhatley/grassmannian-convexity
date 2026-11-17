@@ -32,7 +32,7 @@ Then every zero of $`f`$ has finite order and the sum of the orders of all zeros
 **Theorem 2 (discrete form, assuming [T, Proposition 4.1]).** Start with any real $`k\times n`$ matrix $`V`$ and apply an arbitrary finite sequence of moves
 
 ```math
-v_j\longmapsto v_j+u v_{j+1},\qquad 1\le j<n,\quad u>0,
+v_j\longmapsto v_j+u v_{j+1},\qquad 1\le j\lt n,\quad u>0,
 \tag{3}
 ```
 
@@ -144,7 +144,7 @@ where
 ```math
 c_J=
 \frac{\prod_{a=1}^k g_{j_a}}{\prod_{b=1}^k g_b}
-\frac{\prod_{a<b}(j_b-j_a)}
+\frac{\prod_{a\lt b}(j_b-j_a)}
      {\prod_{a=1}^k(j_a-1)!}>0.
 \tag{11}
 ```
@@ -155,7 +155,7 @@ For the last identity, interpret $`1/m!=0`$ for negative integers $`m`$ and obse
 \det_{a,b}\!\left(\frac1{(j_a-b)!}\right)
 =\frac{\det_{a,b}\bigl((j_a-1)_{b-1}\bigr)}
        {\prod_a(j_a-1)!}
-=\frac{\prod_{a<b}(j_b-j_a)}{\prod_a(j_a-1)!}.
+=\frac{\prod_{a\lt b}(j_b-j_a)}{\prod_a(j_a-1)!}.
 \tag{12}
 ```
 
